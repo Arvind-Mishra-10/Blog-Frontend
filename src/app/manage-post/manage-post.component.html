@@ -1,0 +1,28 @@
+<div class="manage-post-container">
+  <h2>Manage Your Posts</h2>
+  <button class="dashboard-btn" (click)="goToDashboard()">Go to Dashboard</button>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading">Loading user details...</div>
+
+  <!-- Error or No Posts -->
+  <div *ngIf="!loading && posts.length === 0" class="no-posts">You have no posts to manage.</div>
+
+  <!-- Posts Grid -->
+  <div class="posts-grid" *ngIf="!loading && posts.length > 0">
+    <div class="post-card" *ngFor="let post of posts">
+      <div class="post-header">
+        <h3 class="post-title">{{ post.title }}</h3>
+        <p class="post-description">{{ post.description }}</p>
+      </div>
+      <div class="post-content">
+        <p>{{ post.content }}</p>
+      </div>
+      <div class="post-footer">
+        <!-- Edit and Delete Buttons -->
+        <button class="action-btn edit-btn" (click)="editPost(post.id)">Edit</button>
+        <button class="action-btn delete-btn" (click)="deletePost(post.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

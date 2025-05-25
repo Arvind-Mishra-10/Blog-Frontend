@@ -1,0 +1,120 @@
+.manage-post-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.dashboard-btn {
+  display: block;
+  margin: 0 auto 24px auto;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #0056b3;
+  }
+}
+
+.loading,
+.no-posts {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post-header {
+  .post-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .post-description {
+    font-size: 1rem;
+    color: #666;
+  }
+}
+
+.post-content {
+  font-size: 1rem;
+  color: #444;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.action-btn {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+
+  &:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background: #d0d0d0;
+    transform: translateY(0);
+  }
+}
+
+.edit-btn {
+  background: #f0ad4e;
+  color: #fff;
+
+  &:hover {
+    background: #ec971f;
+  }
+}
+
+.delete-btn {
+  background: #d9534f;
+  color: #fff;
+
+  &:hover {
+    background: #c9302c;
+  }
+}

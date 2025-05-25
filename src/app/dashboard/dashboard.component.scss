@@ -1,0 +1,188 @@
+/* filepath: d:\blog-frontend\src\app\dashboard\dashboard.component.scss */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard-container::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+.dashboard-container::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 70% 20%, #43cea2 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, #185a9d 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 12px #43cea2, 0 0 24px #185a9d;
+}
+
+.btn-logout {
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(221,36,118,0.2);
+  transition: background 0.3s, transform 0.2s;
+  font-weight: 600;
+}
+
+.btn-logout:hover {
+  background: linear-gradient(90deg, #dd2476 0%, #ff512f 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #fff;
+  background: rgba(24, 90, 157, 0.25);
+  border-radius: 16px;
+  padding: 12px 24px;
+  box-shadow: 0 2px 16px rgba(67,206,162,0.12);
+}
+
+.person-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+}
+
+.person-icon::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 300px;
+  background: rgba(30, 30, 40, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 32px 24px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  opacity: 0.12;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  text-shadow: 0 0 8px #43cea2, 0 0 16px #185a9d;
+}
+
+.card p {
+  margin-bottom: 24px;
+  font-size: 1rem;
+  z-index: 1;
+  position: relative;
+  color: #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px 0 rgba(67,206,162,0.25);
+}
+
+.btn-action {
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px rgba(67,206,162,0.15);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1;
+  position: relative;
+}
+
+.btn-action:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  transform: scale(1.05);
+}
+
+.dashboard-container p {
+  color: #e0e0e0;
+}

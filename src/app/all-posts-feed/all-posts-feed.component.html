@@ -1,0 +1,27 @@
+<div class="feed-container">
+  <h2>All Posts Feed</h2>
+  <div *ngIf="loading">Loading feed...</div>
+  <div *ngIf="!loading && posts.length === 0">No posts found.</div>
+  <div class="feed-grid" *ngIf="!loading && posts.length > 0">
+    <div class="post-card" *ngFor="let post of posts">
+      <div class="post-header">
+        <img class="profile-pic" src="https://via.placeholder.com/40" alt="Profile Picture" />
+        <span class="username">{{ post.username }}</span>
+      </div>
+      <div class="post-title">{{ post.title }}</div>
+      <div class="post-description">{{ post.description }}</div>
+      <div class="post-content">{{ post.content }}</div>
+      <div class="post-footer">
+        <button class="action-btn like-btn">
+          <i class="fas fa-heart"></i> Like
+        </button>
+        <button class="action-btn comment-btn">
+          <i class="fas fa-comment"></i> Comment
+        </button>
+        <button class="action-btn share-btn">
+          <i class="fas fa-share"></i> Share
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

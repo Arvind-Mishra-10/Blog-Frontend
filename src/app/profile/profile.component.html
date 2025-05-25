@@ -1,0 +1,36 @@
+<div *ngIf="loading">
+  <p>Loading profile...</p>
+</div>
+<div class="profile-container" *ngIf="!loading && user">
+  <div class="profile-card">
+    <div class="avatar">
+      <i class="person-icon"></i>
+    </div>
+    <h2>{{ user.name }}</h2>
+    <p class="username">{{ user.username }}</p>
+    <p class="email">{{ user.email }}</p>
+    <!-- <div class="profile-details">
+    
+    </div> -->
+    <button class="btn-action" (click)="fetchUserPosts()">View All Posts</button>
+    <button class="btn-back" (click)="goToDashboard()">Back to Dashboard</button>
+    <!-- Show posts in an Instagram-style grid -->
+    <div *ngIf="showPosts">
+      <div *ngIf="postsLoading">Loading posts...</div>
+      <div *ngIf="!postsLoading && posts.length === 0">No posts found.</div>
+      <div *ngIf="!postsLoading && posts.length > 0" class="insta-posts-grid">
+        <div class="insta-post-card" *ngFor="let post of posts">
+          <div class="insta-post-header">
+            <span class="insta-post-title">{{ post.title }}</span>
+          </div>
+          <div class="insta-post-description">
+            {{ post.description }}
+          </div>
+          <div class="insta-post-content">
+            {{ post.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
