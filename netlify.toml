@@ -1,0 +1,7 @@
+[build]
+  command = "ng build --configuration production && ng run blog-frontend:server:production"
+  publish = "dist/blog-frontend/browser"
+  functions = "dist/blog-frontend/functions"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
