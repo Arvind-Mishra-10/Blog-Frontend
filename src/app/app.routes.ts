@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [AuthGuard] }, // Protect login route
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' },
+  { path: '**', redirectTo: '/register' }, // wildcard fallback
   {
     path: 'profile/:username',
     loadComponent: () => import('./profile/profile.component').then(m => m.ProfileComponent)
