@@ -3,6 +3,7 @@
   publish = "dist/blog-frontend/browser"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/"
+  to = "/register"
+  status = 301
+
